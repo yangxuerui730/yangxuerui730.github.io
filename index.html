@@ -3,51 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>杨YY的简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .banner {
+            background-color: #74e277;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .banner .contact-info {
+            background-color: #fff;
+            color: #62da66;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-weight: bold;
+        }
+        h1 {
+            color: #6386f7;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 3px solid #626efc;
+        }
+        hr {
+            border: 1px solid #d7edfa;
+        }
+        ul, ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #fff; /* 白色边框 */
+            border-top: 1px solid #c8e0f4; /* 白色横线 */
+        }
+        th {
+            background-color: #4781ff;
+            color: #fff;
+        }
+        td:nth-child(odd) {
+            background-color: #e6f7ff;
+        }
+        td:nth-child(even) {
+            background-color: #f0f8ff;
+        }
+        h2, h3 {
+            color: #1083fe; /* 蓝色标题 */
+        }
+        h5 {
+            color: #20232c;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #c8e0f4;
+        }
+        .section:nth-child(odd) {
+            background-color: #c8e0f4;
+        }
+        .section:nth-child(even) {
+            background-color: #e6f7ff;
+        }
+        .section h2, .section h3 {
+            color: #333;
+        }
+        .section h5 {
+            color: #666;
+        }
+        .self-evaluation {
+            text-align: left;
+        }
+        .view-form-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1583f8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .view-form-link:hover {
+            background-color: #087efc;
+        }
+        .footer {
+            background-color: #60cf63;
+            color: #fff;
+            text-align: right;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .footer .thank-you {
+            display: inline-block;
+            background-color: #fff;
+            color: #5fc962;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-item .icon {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 16px;
+        }
+        .info-item .icon-gender {
+            background-color: #ff69b4;
+        }
+        .info-item .icon-phone {
+            background-color: #add8e6;
+        }
+        .info-item .icon-email {
+            background-color: #90ee90;
+        }
+        .info-item .icon-address {
+            background-color: #f0e68c;
+        }
+        .info-item .icon-birthdate {
+            background-color: #ffa500;
+        }
+        .info-item .icon-height {
+            background-color: #ba55d3;
+        }
+        .info-item .icon-political {
+            background-color: #00ced1;
+        }
+        .course-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .course-item:hover {
+            background-color: #d1e7dd;
+        }
+        .course-item .icon {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #6a0dad;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 16px;
+        }
+        .course-item:nth-child(2n) .icon {
+            background-color: #00bfff;
+        }
+        .course-item:nth-child(3n) .icon {
+            background-color: #ff6347;
+        }
+        .course-item:nth-child(4n) .icon {
+            background-color: #32cd32;
+        }
+        .course-item:nth-child(5n) .icon {
+            background-color: #ffa500;
+        }
+        .course-item:nth-child(6n) .icon {
+            background-color: #6a5acd;
+        }
+        .course-item:nth-child(7n) .icon {
+            background-color: #ba55d3;
+        }
+    </style>
 </head>
 <body>
-    <h1><b>杨YY</b></h1>
-    <img src="self.jpg"alt="This is photo" width="200px">
-    <br>
-    <a href="form.html">form.html</a>
-    <hr>
-    <ul>
-        <li><b>性别</b>: 女</li>
-        <li><b>电话</b>: 17656691069</li>
-        <li><b>邮箱</b>: 17656691069@163.com</li>
-        <li><b>生日</b>: 2005.9.3</li>
-        <li><b>兴趣</b>: 追剧</li>
-    </ul>
-    <hr>
-    <h2><b>教育背景Education</b></h2>
-    <table border="1" width="100%" cellspacing="0">
-        <tr>
-            <th>时间</th>
-            <th>学校</th>
-            <th>职务</th>
-        </tr>
-        <tr>
-            <th>222</th>
-            <th>222</th>
-            <th>222</th>
-        </tr>
-        <tr>
-            <th>333</th>
-            <th>333</th>
-            <th>333</th>
-        </tr>
-    </table>
-    <hr>
-    <h3><b>工作经验</b></h3>
-    <ol>
-        <li>有</li>
-        <li>有</li>
-        <li>有</li>
-        <li>有</li>
-        <li>有</li>
-    </ol>
-    <hr>
-    <h3><b>自我介绍</b></h3>
-    <h5>爱笑，开开心心</h5>
+    <div class="container">
+        <div class="banner">
+            <div class="contact-info">
+                欢迎查看我的简历
+            </div>
+        </div>
+        <h1>杨YY</h1>
+        <img src="self.jpg" alt="这是我的照片" width="200px">
+        <a href="form.html" class="view-form-link">点击查看表单</a>
+        <hr>
+        <div class="section">
+            <h2>基本信息</h2>
+            <div class="info-item">
+                <div class="icon icon-gender"></div>
+                <span>性别: 女</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-phone"></div>
+                <span>电话: 176**********</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-email"></div>
+                <span>邮箱: 176**********@163.com</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-address"></div>
+                <span>地址: 上海市松江区一期学生公寓</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-birthdate"></div>
+                <span>出生年月: 2005.9.3</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-height"></div>
+                <span>身高: 164cm</span>
+            </div>
+            <div class="info-item">
+                <div class="icon icon-political"></div>
+                <span>政治面貌: 共青团员</span>
+            </div>
+        </div>
+        <div class="section">
+            <h2>教育背景</h2>
+            <table>
+                <tr>
+                    <th>时间</th>
+                    <th>学校</th>
+                    <th>专业</th>
+                    <th>学历</th>
+                </tr>
+                <tr>
+                    <td>2023.07-2027.06</td>
+                    <td>上海对外经贸大学</td>
+                    <td>信息管理与信息系统</td>
+                    <td>本科</td>
+                </tr>
+            </table>
+            <h3>主修课程</h3>
+            <div class="course-list">
+                <div class="course-item">
+                    <div class="icon">A</div>
+                    <span>C 程序设计(英)</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">B</div>
+                    <span>Java SE 程序设计</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">C</div>
+                    <span>HTML 与 JavaScript 程序设计</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">D</div>
+                    <span>Python 语言基础</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">E</div>
+                    <span>数据结构与数据算法</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">F</div>
+                    <span>数据库原理与设计</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">G</div>
+                    <span>商务决策模拟理论与方法</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">H</div>
+                    <span>运筹学</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">I</div>
+                    <span>微观经济学</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">J</div>
+                    <span>宏观经济学</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">K</div>
+                    <span>管理信息系统</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">L</div>
+                    <span>微积分 A</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">M</div>
+                    <span>管理学</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">N</div>
+                    <span>概率论 A</span>
+                </div>
+                <div class="course-item">
+                    <div class="icon">O</div>
+                    <span>统计学</span>
+                </div>
+            </div>
+            <h3>荣誉</h3>
+            <ul>
+                <li>2024-2025 学年第一学年校二等奖学金</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>实习经历</h2>
+            <h3>顶程教育 校园实习生</h3>
+            <h5>2024.10.13-2025.4.7</h5>
+            <ul>
+                <li>深入了解顶程的理念、教学方式，传播给所需要的人。</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>校园经历</h2>
+            <h3>美国建模大赛校内选拔赛 队长</h3>
+            <h5>2024.12</h5>
+            <ul>
+                <li>通过建立物理模型和编写代码来解决问题，主要负责论文编写和资料搜集。</li>
+            </ul>
+            <h3>第十七届计算机应用能力大赛校内选拔赛 队长</h3>
+            <h5>2024.11</h5>
+            <ul>
+                <li>通过 PS 并添加应用原理来支撑，美化和设计图片作品。</li>
+            </ul>
+            <h3>统计与信息学院的青年志愿者中心 PS 部门成员</h3>
+            <h5>2023.10--2024.06</h5>
+            <ul>
+                <li>参与制作 SUIBE 青春统信 公众号中有关志愿者的推送，通过秀米完成推送的图文排版，通过 稿定设计完成推送的封面；参与院团委的相关值班工作。</li>
+            </ul>
+            <h3>第十五届金融投资大赛 队长</h3>
+            <h5>2023.4</h5>
+            <ul>
+                <li>每天观察股市行情，适时买进和抛出股票，维持收益稳定。</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>技能证书</h2>
+            <ul>
+                <li>计算机技能：计算机《二级 WPS Office 高级应用》证书；熟练掌握 word、excel、PPT 等日常办公软件。</li>
+                <li>语言能力：大学英语四级（CET-4）</li>
+            </ul>
+        </div>
+        <div class="section self-evaluation">
+            <h2>自我评价</h2>
+            <p>在校期间的学习，掌握了专业相关知识技能，并有着良好的道德修养和专业素养，有着良好的团队精神，为人诚实可靠，品行端正，具有亲和力。在遇到不会做的事情的时候，会积极询问，并且积极学习，学习效率高。做事情不会推托，不会赶 DDL，尽量做到今日任务今日完成，并且具有高度的敬业精神和团队精神，与人相处融洽，处事认真谨慎，注重工作效率，性格乐观温和。</p>
+        </div>
+        <div class="footer">
+            <div class="thank-you">
+                感谢您的阅读
+            </div>
+        </div>
+    </div>
 </body>
 </html>
